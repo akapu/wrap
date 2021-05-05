@@ -26,10 +26,10 @@ int main()
         points[len_points].y = y;
         len_points++;
     }
-    
-    qsort(points, len_points, sizeof(POINT*), pntcmp);    
 
-    
+    qsort(points, len_points, sizeof(POINT),
+            (int (*)(const void *, const void *)) pntcmp);    
+
     free(points);
 }
 
